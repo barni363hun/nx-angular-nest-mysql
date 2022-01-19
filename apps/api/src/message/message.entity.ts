@@ -1,10 +1,5 @@
-
 import { MessageInterface } from '@nx-angular-nest-mysql/my-ts-lib';
-import {
-  Column,
-  Entity,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class MessageEntity implements MessageInterface {
@@ -12,11 +7,12 @@ export class MessageEntity implements MessageInterface {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({
-    length: 100
-})
+  @Column()
   author: string;
 
-  @Column("text")
+  @Column()
   message: string;
+
+  @Column({default:0})
+  likes: number;
 }

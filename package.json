@@ -6,9 +6,9 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
-    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js -f ./migration-config.json",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "initdb":"mysql -e 'CREATE DATABASE my-app-nanm'"
   },
   "private": true,
   "dependencies": {
@@ -29,8 +29,8 @@
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.4.0",
-    "ts-node": "^10.4.0",
     "tslib": "^2.0.0",
+    "typeorm": "^0.2.41",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

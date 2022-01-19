@@ -6,11 +6,7 @@
   "password": "Abc123456",
   "database": "my-app-nanm",
   "synchronize": false, 
-  "entities": ["dist/**/*.entity{ .ts,.js}"],
   "migrations": ["dist/db/migrations/*{.ts,.js}"],
   "migrationsRun": true,
-  "cli": {
-    "migrationsDir": "src/db/migrations",
-    "entitiesDir": "dist/Entitites/"
-  }
+  "entities": []
 }
