@@ -2,8 +2,8 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "api-interfaces": "libs/api-interfaces",
     "my-app": "apps/my-app",
-    "my-app-e2e": "apps/my-app-e2e"
+    "my-app-e2e": "apps/my-app-e2e",
+    "my-ts-lib": "libs/my-ts-lib"
   }
 }

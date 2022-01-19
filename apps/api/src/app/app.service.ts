@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Message } from '@nx-angular-nest-mysql/api-interfaces';
+import { MessageInterface } from '@nx-angular-nest-mysql/my-ts-lib';
 
 @Injectable()
 export class AppService {
-  getData(): Message {
-    return { message: 'Welcome to api!' };
+  getData(): MessageInterface {
+    return {author:"Mr. Developer", message: 'Welcome to api!' };
   }
 }

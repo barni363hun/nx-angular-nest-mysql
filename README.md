@@ -1,5 +1,7 @@
 
 
+//what is this? ormconfig/"synchronize": false, 
+
 # NxAngularNestMysql
 
 This project was generated using [Nx](https://nx.dev).

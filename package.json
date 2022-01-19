@@ -6,6 +6,7 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js -f ./migration-config.json",
     "build": "nx build",
     "test": "nx test"
   },
@@ -20,11 +21,15 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^1.1.6",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/typeorm": "^8.0.3",
     "@nrwl/angular": "13.4.6",
+    "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.4.0",
+    "ts-node": "^10.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },

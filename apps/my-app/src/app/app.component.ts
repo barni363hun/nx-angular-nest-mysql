@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@nx-angular-nest-mysql/api-interfaces';
+import { MessageInterface } from '@nx-angular-nest-mysql/my-ts-lib';
 
 @Component({
   selector: 'nx-angular-nest-mysql-root',
@@ -8,6 +8,6 @@ import { Message } from '@nx-angular-nest-mysql/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
+  hello$ = this.http.get<MessageInterface>('/api/hello');
   constructor(private http: HttpClient) {}
 }

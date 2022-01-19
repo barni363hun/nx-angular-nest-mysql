@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { Message } from '@nx-angular-nest-mysql/api-interfaces';
+import { MessageInterface } from '@nx-angular-nest-mysql/my-ts-lib';
 
 import { AppService } from './app.service';
 
@@ -9,7 +9,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get('hello')
-  getData(): Message {
+  getData(): MessageInterface {
     return this.appService.getData();
   }
 }

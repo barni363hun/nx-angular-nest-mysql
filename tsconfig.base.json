@@ -15,9 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-angular-nest-mysql/api-interfaces": [
-        "libs/api-interfaces/src/index.ts"
-      ]
+      "@nx-angular-nest-mysql/my-ts-lib": ["libs/my-ts-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
