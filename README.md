@@ -9,14 +9,12 @@
 # NxAngularNestMysql
 This is a Template for creating a Nx-Angular-Nest-Mysql application.
 
+Run everything under /nx-angular-nest-mysql
+
+Use the thunder-collection_nest-mysql.json for testing
 ### Required to start
 
-Run under /nx-angular-nest-mysql:
-
 - `npm i`
-
-Create a database for the backend:
-
 - MySql database named "my-app-nanm" (CREATE DATABASE `my-app-nanm`;)
 
 ### Execution
