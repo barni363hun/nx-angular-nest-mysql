@@ -32,5 +32,16 @@ export class MessageService {
   async delete(id: number): Promise<any>{
     return this.messageRepository.delete(id)
   }
+
+  async getRandom(): Promise<MessageEntity>{
+    const messages: MessageEntity[] = await this.messageRepository.find();
+    return messages[Math.floor(Math.random() * messages.length)];
+  }
+  
+  async getRandomMessage(): Promise<MessageInterface> {
+    const messages: MessageEntity[] = await this.messageRepository.find();
+    const myMessage = messages[Math.floor(Math.random() * messages.length)];
+    return {author:myMessage.author, message: myMessage.message};
+  }
 }
 

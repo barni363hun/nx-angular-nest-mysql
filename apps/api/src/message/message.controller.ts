@@ -6,7 +6,7 @@ import { MessageService } from './message.service';
 export class MessageController {
   constructor(private messageService: MessageService) {}
 
-  @Get()
+  @Get("get/all")
   async all() {
     return this.messageService.all();
   }
@@ -16,10 +16,9 @@ export class MessageController {
     this.messageService.create(body);
   }
 
-  @Get(':id')
+  @Get(":id")
   async get(
-    @Param('id')
-    id: number
+    @Param('id') id: number
   )
   {
     return this.messageService.get(id);
@@ -36,5 +35,15 @@ export class MessageController {
   @Delete(':id')
   async delete(@Param('id') id: number) {
     return this.messageService.delete(id);
+  }
+  
+  @Get('get/random')
+  async getRandom() {
+    return this.messageService.getRandom();
+  }
+  
+  @Get('get/randomMessage')
+  async getRandomMessage() {
+    return this.messageService.getRandomMessage();
   }
 }

@@ -8,6 +8,6 @@ import { MessageInterface } from '@nx-angular-nest-mysql/my-ts-lib';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<MessageInterface>('/api/hello');
+  hello$ = this.http.get<MessageInterface>('/api/messages/get/randomMessage');
   constructor(private http: HttpClient) {}
 }

@@ -1,9 +1,64 @@
 
-
-//what is this? ormconfig/"synchronize": false, 
-CREATE DATABASE `my-app-nanm`;
+<a href="https://code.visualstudio.com/">![Visual Studio Code](https://img.shields.io/static/v1?style=for-the-badge&message=Visual+Studio+Code&color=007ACC&logo=Visual+Studio+Code&logoColor=FFFFFF&label=)</a>
+<a href="https://github.com/">![GitHub](https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=181717&logo=GitHub&logoColor=FFFFFF&label=)</a>
+<a href="https://nx.dev/">![Nx](https://img.shields.io/static/v1?style=for-the-badge&message=Nx&color=143055&logo=Nx&logoColor=FFFFFF&label=)</a>
+<a href="https://www.mysql.com/">![MySQL](https://img.shields.io/static/v1?style=for-the-badge&message=MySQL&color=4479A1&logo=MySQL&logoColor=FFFFFF&label=)</a>
+<a href="https://nestjs.com/">![NestJS](https://img.shields.io/static/v1?style=for-the-badge&message=NestJS&color=E0234E&logo=NestJS&logoColor=FFFFFF&label=)</a>
+<a href="https://angular.io/">![Angular](https://img.shields.io/static/v1?style=for-the-badge&message=Angular&color=DD0031&logo=Angular&logoColor=FFFFFF&label=)</a>
 
 # NxAngularNestMysql
+This is a Template for creating a Nx-Angular-Nest-Mysql application.
+
+### Required to start
+
+Run under /nx-angular-nest-mysql:
+
+- `npm i`
+
+Create a database for the backend:
+
+- MySql database named "my-app-nanm" (CREATE DATABASE `my-app-nanm`;)
+
+### Execution
+
+Frontend _(you can reach it on http://localhost:4200/)_:
+
+- `nx serve my-app`
+
+Backend _(you can reach it on http://localhost:3333/)_:
+
+- `nx serve api`
+
+Test:
+
+- `nx e2e my-app-e2e --watch` 
+  <sub><sup>Maybe you need to wait for a bit. If cypress not works scroll down.</sup></sub>
+
+### Build
+
+- `nx run my-app:build`
+- `nx run-many --target=build --projects=my-app,api`
+
+### Other useful commands
+
+- Run `nx affected:apps` to get all apps which you have changed.
+- Run `nx affected:libs` to get all libraries which you have changed.
+- Run `nx affected:test` to test all apps which you have changed.
+- Run `nx affected:test -- --only-failed` to test all apps which failed last time.
+- Run `nx test my-app` to test the 'my-app' app.
+- Run `ng g @nrwl/angular:lib new-lib` to generate the 'new-lib' library.
+- Run `ng g component components/my-component --project=my-app` to add 'my-component' component to the 'my-app' project
+
+If you have issues with cypress try running:
+
+- `npm cache clear -f`
+- `npm i cypress -D`
+- `node_modules/.bin/cypress install`
+
+//what is this? ormconfig/"synchronize": false, 
+
+
+# Basic NX stuff
 
 This project was generated using [Nx](https://nx.dev).
 
