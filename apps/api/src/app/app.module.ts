@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MessageModule } from '../message/message.module';
+import { MessageEntity } from '../message/message.entity';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { MessageModule } from '../message/message.module';
       username: 'root',
       password: 'Abc123456',
       database: "my-app-nanm",
-      autoLoadEntities:true, //only in development mode
+      entities: [MessageEntity],
+      //autoLoadEntities:true, //only in development mode
       synchronize: true,
     }),
     MessageModule,

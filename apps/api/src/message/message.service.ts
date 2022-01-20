@@ -20,4 +20,17 @@ export class MessageService {
   async create(data):Promise<MessageEntity> {
     return this.messageRepository.save(data);
   }
+  
+  async get(id:number):Promise<MessageEntity> {
+    return this.messageRepository.findOne(id);
+  }
+
+  async update(id: number, data: MessageInterface): Promise<any>{
+    return this.messageRepository.update(id,data)
+  }
+  
+  async delete(id: number): Promise<any>{
+    return this.messageRepository.delete(id)
+  }
 }
+

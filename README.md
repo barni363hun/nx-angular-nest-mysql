@@ -1,6 +1,7 @@
 
 
 //what is this? ormconfig/"synchronize": false, 
+CREATE DATABASE `my-app-nanm`;
 
 # NxAngularNestMysql
 
