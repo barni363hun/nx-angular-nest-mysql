@@ -1,1 +1,3 @@
-export * from './lib/my-ts-lib';
+export * from './message/message.interface';
+export * from './auth';
+export * from './errorhandling';

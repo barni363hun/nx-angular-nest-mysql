@@ -5,6 +5,7 @@
 
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { OperationExceptionFilter } from '@nx-angular-nest-mysql/my-ts-lib';
 
 import { AppModule } from './app/app.module';
 
@@ -12,6 +13,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
+  app.useGlobalFilters(new OperationExceptionFilter());
   const port = process.env.PORT || 3333;
   await app.listen(port);
   Logger.log(
